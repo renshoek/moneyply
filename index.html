@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+
+<body>
+    
+    <button onClick = "display();sharkAdd(100)">Press Me</button>
+    <br>
+    <br>
+    <h1 id="amount"></h1> 
+    <p id = "money"></p>
+    
+
+
+<script>
+
+    function display() {
+        var string = "💵 ";
+        var message = document.getElementById("money");
+        message.innerHTML += string.repeat(100);
+    }
+    
+
+var money = [0];
+var sharkAmountDisplay = document.getElementById('amount');
+
+sharkAmountDisplay.innerHTML = money[0];
+
+
+function sharkAdd(value) {
+
+    money[0] = money[0] + value;
+
+    sharkAmountDisplay.innerHTML = "You recieved $" + money[0];
+}
+
+</script>
+</body>
+
+
+</html>
